@@ -41,7 +41,7 @@ for image in drawn_digits.images:
 
     processed_images.append(thresh_color)
 
-# Visual: Digit occurrence count and data visualization part
+# Visualization: Digit occurrence count and data visualization part
 digit_counts = collections.Counter(drawn_digits.target)
 print("Digit Occurrences: ", digit_counts)
 
