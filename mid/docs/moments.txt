@@ -1,2 +1,0 @@
-M = cv2.moments(cnt): It calculates the moments of the contour. 
-Moments are a set of statistical parameters to describe the shape of an object. Here, they are used to find the centroid of the contour.

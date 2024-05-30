@@ -26,8 +26,7 @@ for image in drawn_digits.images:
 
     contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    if contours:
-        cnt = contours[0]
+    for cnt in contours:
         M = cv2.moments(cnt)
         if M['m00'] != 0:
             centroid_x = int(M['m10'] / M['m00'])
@@ -36,7 +35,8 @@ for image in drawn_digits.images:
             cv2.circle(thresh_color, (centroid_x, centroid_y), 0, (255, 0, 0), -1)
         else:
             centroids.append((-1, -1))
-    else:
+            
+    if not contours:
         centroids.append((-1, -1))
 
     processed_images.append(thresh_color)

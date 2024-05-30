@@ -1,5 +1,3 @@
-Sure, let's break down the code line by line:
-
 1. `digits = load_digits()`: This line loads the digits dataset using the `load_digits()` function from sklearn.datasets. This dataset contains grayscale images of handwritten digits along with their corresponding labels.
 
 2. `processed_images = []`: This initializes an empty list called `processed_images` to store the preprocessed images.
